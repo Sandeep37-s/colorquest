@@ -8,5 +8,6 @@
   "shortDescription": "Match colors and bring 18 original pictures to life.",
   "description": "Choose colors and fill shapes to match a reference picture. Earn stars and unlock 18 original scenes featuring woodland animals, ocean adventures, cozy settings, and fantasy worlds. Paint at your own pace with hints, zoom, undo, and an optional numbered color guide. Supports touch, mouse, and keyboard.",
   "publicURL": "https://sandeep37-s.github.io/colorquest/",
-  "certified": false
+  "certified": false,
+  "intendedAudience": "General audience aged 13+, including teens and adults"
 }
