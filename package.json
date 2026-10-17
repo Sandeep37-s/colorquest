@@ -1,0 +1,21 @@
+{
+  "name": "colorquest",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "node --test",
+    "build:youtube": "vite build --mode youtube",
+    "preview:youtube": "vite preview --mode youtube --host 0.0.0.0",
+    "test:browser": "node tests/browser.mjs",
+    "test:integration": "node tests/youtube-browser.mjs",
+    "check:bundles": "node tests/bundles.mjs"
+  },
+  "devDependencies": {
+    "vite": "^7.1.0",
+    "@playwright/test": "^1.56.0"
+  }
+}

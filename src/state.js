@@ -1,0 +1,7 @@
+import {levels,colors} from './levels.js';
+export const emptyState=()=>({level:0,selected:'gray',fills:{},attempts:0,sound:false,stars:Array(levels.length).fill(0),sessions:{}});
+export function restore(raw){const s=emptyState();if(!raw||typeof raw!=='object')return s;s.stars=s.stars.map((_,i)=>Number.isInteger(raw.stars?.[i])?Math.max(0,Math.min(3,raw.stars[i])):0);s.sound=raw.sound===true;s.selected=Object.hasOwn(colors,raw.selected)?raw.selected:'gray';s.level=Number.isInteger(raw.level)&&levels[raw.level]&&isUnlocked(s,raw.level)?raw.level:0;
+for(let i=0;i<levels.length;i++){const saved=raw.sessions?.[i]||(i===raw.level?raw:null);if(!saved)continue;const fills={};for(const r of levels[i].regions)if(Object.hasOwn(colors,saved.fills?.[r.id]))fills[r.id]=saved.fills[r.id];s.sessions[i]={fills,attempts:Number.isSafeInteger(saved.attempts)&&saved.attempts>=0?saved.attempts:0};}const current=s.sessions[s.level];if(current){s.fills={...current.fills};s.attempts=current.attempts;}return s;}
+export function isUnlocked(s,index){return index===0||levels.slice(0,index).every((_,i)=>s.stars[i]>0);}
+export function remember(s){s.sessions[s.level]={fills:{...s.fills},attempts:s.attempts};}
+export function switchLevel(s,index){if(!Number.isInteger(index)||!levels[index]||!isUnlocked(s,index))return false;remember(s);s.level=index;const session=s.sessions[index]||{fills:{},attempts:0};s.fills={...session.fills};s.attempts=session.attempts;return true;}
