@@ -13,7 +13,7 @@ Node.js 20.19+ or 22.12+ is required.
 
 Host the CONTENTS of `dist/` for the public playable URL requested by the interest form. This build has no remote dependencies. Saves stay in the current browser. If browser storage is unavailable, the game still works for the session. Legacy saves from version 1.0 migrate automatically.
 
-Vercel: import the project, choose the Vite preset, use `npm run build`, output `dist`. GitHub Pages: deploy the contents of `dist` using Pages Actions. `base: './'` supports repository subdirectories. Open the actual public URL in a private browser and a phone before entering it in the form. No deployment has been performed in this chat.
+Vercel: import the project, choose the Vite preset, use `npm run build`, output `dist`. GitHub Pages: deploy the contents of `dist` using Pages Actions. `base: './'` supports repository subdirectories. Open the actual public URL in a private browser and a phone before entering it in the form. Public web demo published and verified at https://sandeep37-s.github.io/colorquest/. The Pages workflow in .github/workflows/pages.yml tests, builds and publishes game changes on master.
 
 ## YouTube build
 
@@ -67,7 +67,7 @@ For production platform integration tests, start the YouTube preview at port 517
 
 ## Before official distribution
 
-The game is not certified, not publicly hosted by this chat, and no acceptance or placement is promised. You still need:
+The game is not certified, publicly hosted on GitHub Pages, and no acceptance or placement is promised. You still need:
 
 1. Access/selection through YouTube's interest and partner process.
 2. The official Playables SDK Test Suite and developer-portal/ingested-build checks; local mocks do not replace those.

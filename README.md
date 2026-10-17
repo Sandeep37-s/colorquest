@@ -8,7 +8,7 @@ Pick a color. Match the reference. Bring a picture to life.
 
 **18 original pictures** &nbsp; · &nbsp; **One colorful journey** &nbsp; · &nbsp; **Phone · Tablet · Desktop**
 
-[Explore the pictures](#a-picture-for-every-mood) · [Run locally](#play-locally) · [Publish the game](#publish-your-own-build) · [Developer guide](docs/DEVELOPMENT.md)
+[**▶ Play ColorQuest**](https://sandeep37-s.github.io/colorquest/) · [Explore the pictures](#a-picture-for-every-mood) · [Run locally](#play-locally) · [Publish the game](#publish-your-own-build) · [Developer guide](docs/DEVELOPMENT.md)
 
 </div>
 
@@ -84,7 +84,7 @@ The public web build is written to **`dist/`**.
 
 Assets use relative paths, so the game can run from a repository subdirectory. Hosting the source files alone won’t build the game—you must publish the compiled output.
 
-The public web version saves progress in the current browser. This repository does not yet list a verified public playable URL.
+The public web version saves progress in the current browser. **Live game:** [Play ColorQuest](https://sandeep37-s.github.io/colorquest/). GitHub Pages publishes the game automatically when game changes are pushed to `master`.
 
 <details>
 <summary><strong>YouTube Playables integration</strong></summary>
